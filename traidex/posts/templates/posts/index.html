@@ -1,3 +1,6 @@
+<title>Entry List</title>
+<a href="{% url 'posts:create' %}">Create a Post</a>
+
 {%  if latest_entry_list %}
 	<ul>
 	{% for entry in latest_entry_list %}

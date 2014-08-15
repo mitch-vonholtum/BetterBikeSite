@@ -1,0 +1,9 @@
+<title>Create a Post</title>
+{% if error_message %} <p><strong>{{ error_message}}</strong></p>{% endif %}
+
+<form action="{% url 'posts:create' entry.id %}" method="post">
+{% csrf_token %} <!--Need this to protect against cross-site request forgery-->
+	<input type="text" name="text_post" id="text_post" />
+	<label for="text_post">Entry Text: </label><br />
+<input type="submit" value="Post" />
+</form>
